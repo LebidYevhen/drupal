@@ -1,0 +1,21 @@
+uuid: f054ee59-3ee0-4888-9c92-ff6988aa17b9
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_book_isbn
+field_name: field_book_isbn
+entity_type: node
+type: string
+settings:
+  max_length: 50
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,21 @@
+uuid: cdebbf25-abee-4d2f-9f4e-7d392b8105a0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_book_date_of_signing
+    - node.type.book
+  module:
+    - datetime
+id: node.book.field_book_date_of_signing
+field_name: field_book_date_of_signing
+entity_type: node
+bundle: book
+label: 'Date of signing in circulation'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

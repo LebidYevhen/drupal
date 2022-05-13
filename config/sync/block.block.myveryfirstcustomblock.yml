@@ -1,0 +1,30 @@
+uuid: f0238e7b-0b6f-490b-b005-ee477e8ef622
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:26056003-a84e-43ed-8700-5ce60f07c24c'
+  module:
+    - block_content
+    - system
+  theme:
+    - bartik
+id: myveryfirstcustomblock
+theme: bartik
+region: featured_top
+weight: 0
+provider: null
+plugin: 'block_content:26056003-a84e-43ed-8700-5ce60f07c24c'
+settings:
+  id: 'block_content:26056003-a84e-43ed-8700-5ce60f07c24c'
+  label: 'My very first custom block'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'
