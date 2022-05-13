@@ -20,8 +20,15 @@
         "drupal/core-composer-scaffold": "^9.3",
         "drupal/core-project-message": "^9.3",
         "drupal/core-recommended": "^9.3",
+        "drupal/ctools": "3.4",
         "drupal/devel": "4.1",
-        "drupal/module_filter": "^3.2"
+        "drupal/features": "3.12",
+        "drupal/module_filter": "^3.2",
+        "drupal/page_manager": "dev-4.x",
+        "drupal/panels": "4.6",
+        "drupal/views_conditional": "1.4",
+        "drupal/views_field_view": "dev-1.x",
+        "drush/drush": "^10.0"
     },
     "conflict": {
         "drupal/drupal": "*"

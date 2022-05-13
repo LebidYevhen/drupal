@@ -1,0 +1,8 @@
+uuid: a1b60055-e295-4660-b4dd-d515f3c3b4c8
+langcode: en
+status: true
+dependencies: {  }
+name: 'Book genre'
+vid: book_genre
+description: ''
+weight: 0
