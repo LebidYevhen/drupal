@@ -1,0 +1,7 @@
+yl_hello_world.hello_world:
+  path: '/hello-world/page'
+  defaults:
+    _controller: '\Drupal\yl_hello_world\Controller\HelloWorldController::hello_world'
+    _title: 'Hello, World!'
+  requirements:
+    _permission: 'access content'
