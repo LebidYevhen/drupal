@@ -7,7 +7,6 @@ dependencies:
     - field.field.node.book.field_book_circulation
     - field.field.node.book.field_book_cover_image
     - field.field.node.book.field_book_date_of_signing
-    - field.field.node.book.field_book_entity_reference
     - field.field.node.book.field_book_genre
     - field.field.node.book.field_book_isbn
     - field.field.node.book.field_book_publication_date
@@ -28,7 +27,6 @@ hidden:
   field_book_circulation: true
   field_book_cover_image: true
   field_book_date_of_signing: true
-  field_book_entity_reference: true
   field_book_genre: true
   field_book_isbn: true
   field_book_publication_date: true
