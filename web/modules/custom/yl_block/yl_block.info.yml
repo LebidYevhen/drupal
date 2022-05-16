@@ -1,0 +1,7 @@
+name: YL Block
+type: module
+description: A custom Drupal module.
+core_version_requirement: ^9
+package: custom
+dependencies:
+  - drupal:block

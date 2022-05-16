@@ -1,0 +1,25 @@
+uuid: 3014e891-8f43-4d01-9c92-18de899e0118
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+    - yl_block
+  theme:
+    - bartik
+id: customtextblock
+theme: bartik
+region: sidebar_second
+weight: 0
+provider: null
+plugin: yl_block
+settings:
+  id: yl_block
+  label: 'Custom Text Block'
+  label_display: visible
+  provider: yl_block
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'
