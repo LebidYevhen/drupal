@@ -1,0 +1,7 @@
+yl_display_nodes.display_nodes:
+  path: '/display-nodes'
+  defaults:
+    _controller: '\Drupal\yl_display_nodes\Controller\DisplayNodesController::getNodesAction'
+    _title: 'Display Nodes'
+  requirements:
+    _permission: 'access content'
