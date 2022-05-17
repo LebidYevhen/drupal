@@ -1,6 +1,6 @@
-name: YL Block
+name: YL Block Display Text
 type: module
-description: A custom Drupal module.
+description: Drupal block module displaying text.
 core_version_requirement: ^9
 package: custom
 dependencies:
