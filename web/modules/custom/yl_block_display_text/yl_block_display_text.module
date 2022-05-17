@@ -1,0 +1,16 @@
+<?php
+/**
+ * Implements hook_theme().
+ */
+function yl_block_display_text_theme($existing, $type, $theme, $path) {
+  return [
+    'yl_block_display_text' => [
+      'variables' => [
+        'text' => 'Hello, World!',
+        'attributes' => [
+          'class' => ['yl-block-display-text'],
+        ],
+      ],
+    ],
+  ];
+}

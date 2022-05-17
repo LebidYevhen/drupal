@@ -64,6 +64,7 @@ module:
   user: 0
   views_field_view: 0
   views_ui: 0
+  yl_block_display_text: 0
   yl_display_nodes: 0
   yl_hello_world: 0
   views: 10
