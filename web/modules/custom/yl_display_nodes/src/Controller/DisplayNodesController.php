@@ -1,41 +1,71 @@
 <?php
 
-
 namespace Drupal\yl_display_nodes\Controller;
 
+use Drupal\Core\Controller\ControllerBase;
+use Drupal\Core\Link;
 
-class DisplayNodesController
-{
-  public function get_nodes()
-  {
-    $nodes = \Drupal::database()
-      ->select('node_field_data', 'n')
-      ->fields('n')
+/**
+ * Class DisplayNodesController gets nodes from the database and return them.
+ *
+ * @package Drupal\yl_display_nodes\Controller
+ */
+class DisplayNodesController extends ControllerBase {
+
+  /**
+   * Gets nodes from the database.
+   *
+   * @return mixed
+   *   data from the query.
+   */
+  public function getNodes() {
+    $query = \Drupal::database()->select('node_field_data', 'n');
+    $query->innerJoin('node', 'u', 'n.nid = u.nid');
+    $query->fields('n', ['title', 'created', 'nid']);
+    $query->fields('u', ['nid']);
+
+    return $query
+      ->condition('n.status', 1)
       ->range(0, 5)
       ->execute()
       ->fetchAll();
-
-    return $nodes;
   }
 
-  public function display_nodes()
-  {
-    $nodes_html = '';
-    $node_html_structure = '<div class="node"><h2><a href="%s">%s</a></h2><p>%s</p></div>';
-    $host = \Drupal::request()->getSchemeAndHttpHost();
+  /**
+   * Loops through @return array
+   *   with data to display in the twig template.
+   *
+   * @link getNodes() data and returns them to the twig template.
+   *
+   */
+  public function getNodesAction(): array {
+    $nodes_data = [];
 
-    foreach ($this->get_nodes() as $node) {
-      $node_url = $host . '/node/'. $node->nid;
+    $options = ['absolute' => TRUE, 'attributes' => ['class' => 'node-link']];
+    foreach ($this->getNodes() as $node) {
+      $nid = $node->nid;
       $node_title = $node->title;
-      $node_date_created = date('F j, Y', $node->created);
+      $node_date_created = \Drupal::service('date.formatter')
+        ->format($node->created, NULL, NULL, date_default_timezone_get());
+      $link_object = Link::createFromRoute(
+        $node_title,
+        'entity.node.canonical',
+        ['node' => $nid],
+        $options);
 
-
-
-      $nodes_html = $nodes_html . sprintf($node_html_structure, $node_url, $node_title, $node_date_created);
+      $nodes_data[] = [
+        'link_object' => $link_object->toString(),
+        'node_date_created' => $node_date_created,
+      ];
     }
 
-    return array(
-      '#markup' => $nodes_html
-    );
+    return [
+      '#theme' => 'yl_display_nodes',
+      '#nodes_data' => $nodes_data,
+      'attributes' => [
+        'class' => ['nodes'],
+      ],
+    ];
   }
+
 }

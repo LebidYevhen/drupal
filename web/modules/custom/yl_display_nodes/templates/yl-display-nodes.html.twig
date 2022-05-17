@@ -1,0 +1,10 @@
+<div {{ attributes }}>
+
+  {% for el in nodes_data %}
+    <div>
+      <h2>{{ el.link_object }}</h2>
+      <p>{{ el.node_date_created }}</p>
+    </div>
+  {% endfor %}
+
+</div>
