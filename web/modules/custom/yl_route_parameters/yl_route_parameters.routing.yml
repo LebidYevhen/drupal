@@ -1,0 +1,8 @@
+yl_route_parameters.amount:
+  path: '/route/{amount}'
+  defaults:
+    _title: 'Blocks'
+    _controller: '\Drupal\yl_route_parameters\Controller\RouteParametersController::content'
+  requirements:
+    _permission: 'access content'
+    amount: '[1-6]'
