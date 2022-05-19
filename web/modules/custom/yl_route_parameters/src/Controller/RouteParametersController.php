@@ -19,6 +19,7 @@ class RouteParametersController extends ControllerBase {
    *   rendered data to the theme hook.
    */
   public function content(int $amount): array {
+    // This array will bi filled of rendered data to display.
     $rendered_data = [];
 
     // Filled array of duplicated machine block name.
@@ -29,8 +30,6 @@ class RouteParametersController extends ControllerBase {
       $plugin_block = $block_manager->createInstance($machine_name);
       $render = $plugin_block->build();
       $rendered_data[] = $render;
-      \Drupal::service('renderer')
-        ->addCacheableDependency($render, $plugin_block);
     }
 
     return [
