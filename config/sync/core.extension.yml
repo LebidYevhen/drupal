@@ -67,6 +67,7 @@ module:
   yl_block_display_text: 0
   yl_display_nodes: 0
   yl_hello_world: 0
+  yl_route_parameters: 0
   views: 10
   standard: 1000
 theme:
