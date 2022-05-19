@@ -18,21 +18,11 @@ class RouteParametersController extends ControllerBase {
    * @return array
    *   rendered data to the theme hook.
    */
-  public function content($amount) {
+  public function content(int $amount): array {
     $rendered_data = [];
 
-    // Blocks machine names.
-    $machine_names = [
-      'yl_block_display_text_block',
-      'user_login_block',
-      'search_form_block',
-      'system_breadcrumb_block',
-      'system_branding_block',
-      'system_powered_by_block',
-    ];
-
-    // Cut from array into amount of URL parameter.
-    $machine_names = array_slice($machine_names, 0, $amount);
+    // Filled array of duplicated machine block name.
+    $machine_names = array_fill(0, $amount, 'system_powered_by_block');
 
     $block_manager = \Drupal::service('plugin.manager.block');
     foreach ($machine_names as $machine_name) {
