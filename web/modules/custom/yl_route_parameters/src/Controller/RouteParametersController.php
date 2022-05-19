@@ -32,7 +32,7 @@ class RouteParametersController extends ControllerBase {
     ];
 
     // Cut from array into amount of URL parameter.
-    $machine_names = array_slice($machine_names, 0, $amount - 1);
+    $machine_names = array_slice($machine_names, 0, $amount);
 
     $block_manager = \Drupal::service('plugin.manager.block');
     foreach ($machine_names as $machine_name) {
