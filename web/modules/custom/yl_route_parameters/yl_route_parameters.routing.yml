@@ -5,4 +5,4 @@ yl_route_parameters.amount:
     _controller: '\Drupal\yl_route_parameters\Controller\RouteParametersController::content'
   requirements:
     _permission: 'access content'
-    amount: '[1-9][0-9]'
+    amount: '^[1-9][0-9]?$|^100$'
