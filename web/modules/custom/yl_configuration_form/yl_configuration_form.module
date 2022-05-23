@@ -1,17 +1,22 @@
 <?php
 
-use Drupal\yl_configuration_form\Form\ModuleConfigurationForm;
+/**
+ * @file
+ */
+
 use Drupal\Core\Entity\EntityInterface;
+use Drupal\taxonomy\Entity\Term;
 
 /**
  * Implements hook_ENTITY_TYPE_presave().
  */
 function yl_configuration_form_node_presave(EntityInterface $entity) {
-  $config = \Drupal::config('yl_configuration_form.admin_settings');
-  $country_name = $config->get('country_var');
+  $config       = \Drupal::config('yl_configuration_form.admin_settings');
+  $term_id      = $config->get('term_id');
+  $term         = Term::load($term_id);
+  $country_name = $term->getName();
 
   if ($entity->getEntityType()->id() == 'node' && isset($country_name)) {
-    $list_of_countries = ModuleConfigurationForm::getListOfCountries();
-    $entity->setTitle($entity->getTitle() . ' ' . $list_of_countries[$country_name]);
+    $entity->setTitle($entity->getTitle() . ' ' . $country_name);
   }
 }
