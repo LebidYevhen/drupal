@@ -1,24 +1,17 @@
 <?php
 
-/**
- * @file
- */
-
+use Drupal\yl_configuration_form\Form\ModuleConfigurationForm;
 use Drupal\Core\Entity\EntityInterface;
-use Drupal\Core\Form\FormStateInterface;
 
 /**
- * Implements hook_form_FORM_ID_alter().
- */
-function yl_configuration_form_form_yl_configuration_form_admin_settings_alter(&$form, FormStateInterface $form_state) {
-  $form['country_name']['#description'] = $form['country_name']['#default_value'];
-}
-
-/**
- * Implements hook_ENTITY_TYPE_insert().
+ * Implements hook_ENTITY_TYPE_presave().
  */
 function yl_configuration_form_node_presave(EntityInterface $entity) {
-  if ($entity->getEntityType()->id() == 'node') {
-    $entity->setTitle($entity->getTitle() . ' test');
+  $config = \Drupal::config('yl_configuration_form.admin_settings');
+  $country_name = $config->get('country_var');
+
+  if ($entity->getEntityType()->id() == 'node' && isset($country_name)) {
+    $list_of_countries = ModuleConfigurationForm::getListOfCountries();
+    $entity->setTitle($entity->getTitle() . ' ' . $list_of_countries[$country_name]);
   }
 }
