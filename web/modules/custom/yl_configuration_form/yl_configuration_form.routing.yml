@@ -1,0 +1,7 @@
+yl_configuration_form.admin_settings:
+  path: '/admin/config/yl_configuration_form'
+  defaults:
+    _form: '\Drupal\yl_configuration_form\Form\ModuleConfigurationForm'
+    _title: 'yl_configuration_form configuration screen'
+  requirements:
+    _permission: 'administer site configuration'

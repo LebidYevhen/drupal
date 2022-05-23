@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ */
+
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function yl_configuration_form_form_yl_configuration_form_admin_settings_alter(&$form, FormStateInterface $form_state) {
+  $form['country_name']['#description'] = $form['country_name']['#default_value'];
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_insert().
+ */
+function yl_configuration_form_node_presave(EntityInterface $entity) {
+  if ($entity->getEntityType()->id() == 'node') {
+    $entity->setTitle($entity->getTitle() . ' test');
+  }
+}

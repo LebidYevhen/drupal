@@ -1,0 +1,7 @@
+name: YL Configuration Form
+type: module
+description: 'YL Configuration Form Drupal 9 Module.'
+package: Custom
+version: 1.0
+core_version_requirement: ^9
+configure: yl_configuration_form.admin_settings
