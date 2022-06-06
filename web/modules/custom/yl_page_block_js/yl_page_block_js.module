@@ -1,0 +1,14 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+function yl_page_block_js_theme($existing, $type, $theme, $path) {
+  return [
+    'yl_page_block_js' => [
+      'variables' => [
+        'test_var' => NULL,
+      ],
+    ],
+  ];
+}
