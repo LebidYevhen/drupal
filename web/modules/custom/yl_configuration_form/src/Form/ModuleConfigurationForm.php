@@ -37,7 +37,6 @@ class ModuleConfigurationForm extends ConfigFormBase {
       '#options'       => $this->getTaxonomyTerms('country'),
       '#title'         => $this->t('Select a country'),
       '#term_id'       => $config->get('term_id'),
-      '#terms'         => $config->get('terms'),
       '#default_value' => $config->get('term_id'),
     ];
 
@@ -49,7 +48,6 @@ class ModuleConfigurationForm extends ConfigFormBase {
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
     $this->config('yl_configuration_form.admin_settings')
-      ->set('terms', $this->getTaxonomyTerms('country'))
       ->set('term_id', $form_state->getValue('country_name'))
       ->save();
     parent::submitForm($form, $form_state);
@@ -64,7 +62,7 @@ class ModuleConfigurationForm extends ConfigFormBase {
    * @return array
    *   An associative array of pairs term_id => term_name.
    */
-  public function getTaxonomyTerms(string $term_name) {
+  public function getTaxonomyTerms(string $term_name): array {
     $terms = \Drupal::entityTypeManager()
       ->getStorage('taxonomy_term')
       ->loadTree($term_name);
