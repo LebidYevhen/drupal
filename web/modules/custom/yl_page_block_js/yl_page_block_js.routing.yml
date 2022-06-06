@@ -1,0 +1,6 @@
+yl_page_block_js.route:
+  path: 'page-block-js'
+  defaults:
+    _controller: '\Drupal\yl_page_block_js\Controller\PageBlockJsController::content'
+  requirements:
+    _permission: 'view content'

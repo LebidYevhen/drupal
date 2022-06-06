@@ -1,0 +1,6 @@
+yl_page_block_js_lib:
+  version: 1.x
+  js:
+    assets/js/yl_page_block_js.js: { }
+  dependencies:
+    - core/jquery

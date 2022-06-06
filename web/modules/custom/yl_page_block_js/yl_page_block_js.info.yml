@@ -1,0 +1,7 @@
+name: YL Page Block Js Module
+type: module
+description: YL Page Block Js Drupal 9 Module.
+core_version_requirement: ^9
+package: custom
+dependencies:
+  - drupal:block

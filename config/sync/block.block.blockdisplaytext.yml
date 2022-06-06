@@ -9,7 +9,7 @@ dependencies:
 id: blockdisplaytext
 theme: bartik
 region: sidebar_second
-weight: 0
+weight: -6
 provider: null
 plugin: yl_block_display_text_block
 settings:
