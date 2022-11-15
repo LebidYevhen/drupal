@@ -12,6 +12,10 @@
     {
       "type": "composer",
       "url": "https://packages.drupal.org/8"
+    },
+    {
+      "type": "vcs",
+      "url": "git@github.com:domaalex/pre-commit-linter.git"
     }
   ],
   "require": {
@@ -101,5 +105,13 @@
         "      composer remove drupal/core-project-message"
       ]
     }
+  },
+  "scripts-dev": {
+    "post-install-cmd": [
+        "sh ./vendor/adomasevich/pre-commit-linter/scripts/setup.sh"
+    ]
+  },
+  "require-dev": {
+    "adomasevich/pre-commit-linter": "dev-master"
   }
 }

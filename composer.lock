@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "91e45f2261cf1aaf78e681f2e9bb3350",
+    "content-hash": "72ce7361d8d8e5d557939c42c950c81c",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -8131,12 +8131,50 @@
             "time": "2015-12-17T08:42:14+00:00"
         }
     ],
-    "packages-dev": [],
+    "packages-dev": [
+        {
+            "name": "adomasevich/pre-commit-linter",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/domaalex/pre-commit-linter.git",
+                "reference": "ab1aa011865eacdf338e5f6ad5ff63a09d05f7a8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/domaalex/pre-commit-linter/zipball/ab1aa011865eacdf338e5f6ad5ff63a09d05f7a8",
+                "reference": "ab1aa011865eacdf338e5f6ad5ff63a09d05f7a8",
+                "shasum": ""
+            },
+            "require": {
+                "dealerdirect/phpcodesniffer-composer-installer": "^0.7.1",
+                "drupal/coder": "^8.3",
+                "squizlabs/php_codesniffer": "^3.0"
+            },
+            "default-branch": true,
+            "type": "library",
+            "license": [
+                "ICS"
+            ],
+            "authors": [
+                {
+                    "name": "Artyom Ilyin",
+                    "email": "kupnoh@gmail.com"
+                }
+            ],
+            "description": "Provides all necessary dependencies for phpcs with drupal coding standards",
+            "support": {
+                "source": "https://github.com/domaalex/pre-commit-linter/tree/master"
+            },
+            "time": "2021-09-07T09:53:39+00:00"
+        }
+    ],
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
         "drupal/page_manager": 20,
-        "drupal/views_field_view": 20
+        "drupal/views_field_view": 20,
+        "adomasevich/pre-commit-linter": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
