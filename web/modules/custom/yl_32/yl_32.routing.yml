@@ -1,0 +1,7 @@
+yl_32.form:
+  path: '/32'
+  defaults:
+    _form: 'Drupal\yl_32\Form\Form'
+    _title: '32'
+  requirements:
+    _permission: 'access content'
