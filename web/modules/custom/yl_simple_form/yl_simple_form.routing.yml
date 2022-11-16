@@ -1,0 +1,7 @@
+yl_simple_form.form:
+  path: '/simple-form'
+  defaults:
+    _form: 'Drupal\yl_simple_form\Form\SimpleForm'
+    _title: 'Welcome to the Simple Form.'
+  requirements:
+    _permission: 'access content'
