@@ -1,0 +1,7 @@
+yl_33.form:
+  path: '/33'
+  defaults:
+    _form: 'Drupal\yl_33\Form\AjaxForm'
+    _title: '33'
+  requirements:
+    _permission: 'access content'
