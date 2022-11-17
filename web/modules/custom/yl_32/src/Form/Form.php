@@ -31,7 +31,7 @@ class Form extends FormBase {
    * {@inheritdoc}
    */
   public function __construct(LoggerChannelFactoryInterface $loggerFactory, EntityTypeManager $entityTypeManage) {
-    $this->logger = $loggerFactory->get('yl_simple_form');
+    $this->logger = $loggerFactory->get('yl_32');
     $this->entityManager = $entityTypeManage;
   }
 
@@ -50,7 +50,7 @@ class Form extends FormBase {
    */
   public function getFormId() {
 
-    return 'yl_simple_form';
+    return 'yl_32';
   }
 
   /**
