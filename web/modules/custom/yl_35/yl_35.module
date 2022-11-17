@@ -4,8 +4,8 @@
  * Implementation of hook_form_alter()
  */
 function yl_35_form_alter(&$form, &$form_state, $form_id) {
-  $form['yl_35_phone'] = array(
+  $form['yl_35_phone'] = [
     '#type' => 'tel',
     '#title' => t('Phone'),
-  );
+  ];
 }
