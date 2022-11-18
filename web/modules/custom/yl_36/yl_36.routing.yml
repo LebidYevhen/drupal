@@ -1,0 +1,7 @@
+yl_32.form:
+  path: '/36'
+  defaults:
+    _form: 'Drupal\yl_36\Form\FormValidation'
+    _title: '36'
+  requirements:
+    _permission: 'access content'
