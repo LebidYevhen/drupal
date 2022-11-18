@@ -1,0 +1,14 @@
+<h1>The list of nodes</h1>
+
+<div class="nodes">
+  {% for node in nodes %}
+    <h3>
+      <a href="{{ node.link }}">
+        {{ node.title }}
+      </a>
+    </h3>
+    <time>
+      {{ node.created }}
+    </time>
+  {% endfor %}
+</div>
