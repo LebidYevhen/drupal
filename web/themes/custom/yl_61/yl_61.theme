@@ -6,3 +6,21 @@
  *
  * Place your custom PHP code in this file.
  */
+
+/**
+ * Implements template_preprocess_node().
+ */
+function yl_61_preprocess_html(&$variables) {
+
+  if ($node = \Drupal::request()->attributes->get('node')) {
+    $nid = $node->id();
+
+    if ($nid % 2 === 0) {
+      $variables['attributes']['class'][] = 'day';
+    }
+    else {
+      $variables['attributes']['class'][] = 'night';
+    }
+  }
+
+}
