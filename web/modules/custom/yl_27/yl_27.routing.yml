@@ -1,7 +1,0 @@
-yl_27.content:
-  path: '/27'
-  defaults:
-    _controller: '\Drupal\yl_27\Controller\DisplayNodesController::content'
-    _title: '27'
-  requirements:
-    _permission: 'access content'
