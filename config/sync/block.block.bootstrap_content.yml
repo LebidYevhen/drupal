@@ -1,15 +1,15 @@
-uuid: 24f3ba98-a0d7-4c37-9d77-b6a66c767e73
+uuid: 77a8002f-1f88-48ab-a9c7-00565c30ec0a
 langcode: en
 status: true
 dependencies:
   module:
     - system
   theme:
-    - yl_61
+    - bootstrap
 _core:
-  default_config_hash: erQSEZF2XUjNmgTl0uNRBzmg18ZGXwUcw2FhApoeuHk
-id: yl_61_content
-theme: yl_61
+  default_config_hash: fNNLN48MSGSLiqwIFywCuxH2Dk_IxDbaP0kYhg_IPrg
+id: bootstrap_content
+theme: bootstrap
 region: content
 weight: 0
 provider: null

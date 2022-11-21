@@ -1,4 +1,4 @@
-uuid: 28620b4b-1673-48c2-9fc8-2ab49c7ded50
+uuid: b960903e-48b8-4e81-ac0c-e805b7b2e7ee
 langcode: en
 status: true
 dependencies:
@@ -10,7 +10,7 @@ _core:
   default_config_hash: 0gq3VPg-_UM69FCCWurLFIrrnIjC2HLKhwo9iQNtcUo
 id: yl_61_syndicate
 theme: yl_61
-region: header
+region: navigation
 weight: 0
 provider: null
 plugin: node_syndicate_block

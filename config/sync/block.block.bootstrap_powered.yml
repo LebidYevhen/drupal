@@ -1,17 +1,17 @@
-uuid: 69df5f2d-a3ad-4bc8-af95-7c12bde5ccf5
+uuid: 6ec2dcd4-9d46-417d-a12b-c8555c04bc1c
 langcode: en
 status: true
 dependencies:
   module:
     - system
   theme:
-    - yl_61
+    - bootstrap
 _core:
-  default_config_hash: eYL19CLDyinGTWYQfBD1DswWzglEotE_kHnHx3AxTXM
-id: yl_61_powered
-theme: yl_61
-region: navigation
-weight: 0
+  default_config_hash: iggZSiUKz4mYP1YPJ8SsUfFu79HIgOTt6IDy3Up59aM
+id: bootstrap_powered
+theme: bootstrap
+region: footer
+weight: -10
 provider: null
 plugin: system_powered_by_block
 settings:

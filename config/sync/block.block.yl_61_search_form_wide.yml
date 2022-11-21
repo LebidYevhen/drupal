@@ -1,4 +1,4 @@
-uuid: 44fdfac7-44d5-4400-b91c-c71227cb3997
+uuid: 0b88ebc3-397d-4526-aae4-fd9827f4a1c2
 langcode: en
 status: true
 dependencies:
@@ -10,7 +10,7 @@ _core:
   default_config_hash: imMyHD6LYci0gtXq56qr9ZKGHzbEG9uFydrN5EhKtSU
 id: yl_61_search_form_wide
 theme: yl_61
-region: secondary_menu
+region: navigation
 weight: -5
 provider: null
 plugin: search_form_block

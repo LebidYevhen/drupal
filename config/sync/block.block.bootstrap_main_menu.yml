@@ -1,4 +1,4 @@
-uuid: 8254d3f7-ec75-4b80-b37c-c0c8acd87d58
+uuid: 0aff65f2-d9b6-4ed9-859d-f9d9f2359bdc
 langcode: en
 status: true
 dependencies:
@@ -7,13 +7,13 @@ dependencies:
   module:
     - system
   theme:
-    - yl_61
+    - bootstrap
 _core:
-  default_config_hash: KWAiziL39uEzmOJEql_wbUP2RtqGceL3WM2CfxhMelE
-id: yl_61_main_menu
-theme: yl_61
-region: navigation
-weight: 0
+  default_config_hash: ERtUwuUKdqiRLiXjBoV7gcIIZgt2IdqWBzqsqtm63w4
+id: bootstrap_main_menu
+theme: bootstrap
+region: navigation_collapsible
+weight: 10
 provider: null
 plugin: 'system_menu_block:main'
 settings:
@@ -23,5 +23,5 @@ settings:
   provider: system
   level: 1
   depth: 2
-  expand_all_items: true
+  expand_all_items: false
 visibility: {  }

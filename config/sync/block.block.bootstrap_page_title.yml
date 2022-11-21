@@ -1,15 +1,15 @@
-uuid: 07f58b53-1b76-48df-bf6a-6ac859e0f148
+uuid: f6fbe356-d6da-4ed1-b53c-85f78d2e5dc5
 langcode: en
 status: true
 dependencies:
   theme:
-    - yl_61
+    - bootstrap
 _core:
-  default_config_hash: 6aOgWsNTXjqrDm98TXSAjP6qd2nCijD1xw45MrnbK-Y
-id: yl_61_page_title
-theme: yl_61
-region: navigation
-weight: -5
+  default_config_hash: 1TQP4b3ZnlzvIH9bj6cpCz_SyUHdJjLQkZnHpikjjhw
+id: bootstrap_page_title
+theme: bootstrap
+region: header
+weight: 0
 provider: null
 plugin: page_title_block
 settings:

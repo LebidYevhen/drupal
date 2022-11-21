@@ -1,15 +1,15 @@
-uuid: b9ebae64-5854-4348-8f01-5fd3e1345430
+uuid: f46ac708-7ba5-4438-b834-6912560eaac9
 langcode: en
 status: true
 dependencies:
   theme:
-    - yl_61
+    - bootstrap
 _core:
-  default_config_hash: Q9_2whdOj1YIomfvsIfopROW4FT_X5pY0DjdOiOaQ5U
-id: yl_61_primary_admin_actions
-theme: yl_61
-region: highlighted
-weight: -5
+  default_config_hash: ffxthelqQF8xcr4GTG4HlaNNsluiHftN0pujmQpW0bQ
+id: bootstrap_local_actions
+theme: bootstrap
+region: header
+weight: 20
 provider: null
 plugin: local_actions_block
 settings:

@@ -1,17 +1,17 @@
-uuid: 498909ec-d73c-4f6d-9bb5-73aa8c1bc4f6
+uuid: 9af44fae-83cd-4346-bac0-2b59e9c3d799
 langcode: en
 status: true
 dependencies:
   module:
     - help
   theme:
-    - yl_61
+    - bootstrap
 _core:
-  default_config_hash: VfPFqqxfkomud5CO8DUijw85QIl9GIxh_nIxLOYESxg
-id: yl_61_help
-theme: yl_61
-region: navigation
-weight: 0
+  default_config_hash: MhtNdV__HKRTab0ZPjkPNfYL4Ng4UPBucDLoC7Rg5Eo
+id: bootstrap_help
+theme: bootstrap
+region: help
+weight: -30
 provider: null
 plugin: help_block
 settings:

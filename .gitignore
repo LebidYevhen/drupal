@@ -32,7 +32,8 @@
 /web/sites/README.txt
 
 !/web/themes/custom/*
-#/web/themes/README.txt
+/web/themes/contrib
+/web/themes/README.txt
 
 /web/.csslintrc
 /web/.editorconfig

@@ -1,21 +1,25 @@
-name: YL 61
 type: theme
-description: 'Task 61'
-core_version_requirement: ^9
-libraries:
-  - yl_61/global-styling
-  - yl_61/global-scripts
-base theme: stable9
+base theme: bootstrap
+core: 8.x
+core_version_requirement: ^8 || ^9
+
+name: 'YL 61'
+description: 'A Drupal Bootstrap 3 based sub-theme.'
+package: 'Bootstrap'
+
 regions:
-  header: 'Header'
-  primary_menu: 'Primary menu'
-  secondary_menu: 'Secondary menu'
+  navigation: 'Navigation'
+  navigation_collapsible: 'Navigation (Collapsible)'
+  header: 'Top Bar'
   highlighted: 'Highlighted'
   help: 'Help'
   content: 'Content'
-  sidebar_first: 'Left sidebar'
-  sidebar_second: 'Right sidebar'
+  sidebar_first: 'Primary'
+  sidebar_second: 'Secondary'
   footer: 'Footer'
-  breadcrumb: 'Breadcrumb'
   page_top: 'Page top'
   page_bottom: 'Page bottom'
+
+libraries-extend:
+  bootstrap/framework:
+    - yl_61/framework

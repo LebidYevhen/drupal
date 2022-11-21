@@ -1,17 +1,17 @@
-uuid: 34c58cb2-cf65-4cf8-a45b-a03f60d9c859
+uuid: e5a97040-2eab-40f8-b511-575f032a4d16
 langcode: en
 status: true
 dependencies:
   module:
     - system
   theme:
-    - yl_61
+    - bootstrap
 _core:
-  default_config_hash: BZ5tpW7H8X4PVGRm3MImTIHd2tN0eF7zOtp4SpRYUA0
-id: yl_61_messages
-theme: yl_61
-region: highlighted
-weight: -5
+  default_config_hash: 9RnnTUBcn0WRWXfrGOnId2H0Q31uQUeu_F5TnDxl2yg
+id: bootstrap_messages
+theme: bootstrap
+region: header
+weight: -50
 provider: null
 plugin: system_messages_block
 settings:

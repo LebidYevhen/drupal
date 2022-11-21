@@ -1,17 +1,17 @@
-uuid: 74f162ab-0d0f-4627-b178-e353fb94662f
+uuid: ae312928-3021-4c20-a85a-e03e05b4e8ae
 langcode: en
 status: true
 dependencies:
   module:
     - system
   theme:
-    - yl_61
+    - bootstrap
 _core:
-  default_config_hash: VhBzWb7lMRtIOg9G7VSw_0uopi-7zXeHq4vXqqV1HFE
-id: yl_61_breadcrumbs
-theme: yl_61
-region: navigation
-weight: 0
+  default_config_hash: wDR9JKEATSWldBjw8du8s3G2zjEYeQf88nlld11hMLo
+id: bootstrap_breadcrumbs
+theme: bootstrap
+region: header
+weight: -100
 provider: null
 plugin: system_breadcrumb_block
 settings:
