@@ -1,0 +1,5 @@
+# Schema for the theme setting configuration file of the YL 61 theme.
+
+yl_61.settings:
+  type: theme_settings
+  label: 'YL 61 settings'

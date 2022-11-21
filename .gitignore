@@ -30,6 +30,8 @@
 /web/sites/example.settings.local.php
 /web/sites/example.sites.php
 /web/sites/README.txt
+/web/themes/contrib/*
+!/web/themes/custom/*
 /web/themes/README.txt
 /web/.csslintrc
 /web/.editorconfig

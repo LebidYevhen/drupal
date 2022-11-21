@@ -1,0 +1,22 @@
+uuid: 74f162ab-0d0f-4627-b178-e353fb94662f
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - yl_61
+_core:
+  default_config_hash: VhBzWb7lMRtIOg9G7VSw_0uopi-7zXeHq4vXqqV1HFE
+id: yl_61_breadcrumbs
+theme: yl_61
+region: navigation
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility: {  }

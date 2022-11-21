@@ -1,0 +1,22 @@
+uuid: 69df5f2d-a3ad-4bc8-af95-7c12bde5ccf5
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - yl_61
+_core:
+  default_config_hash: eYL19CLDyinGTWYQfBD1DswWzglEotE_kHnHx3AxTXM
+id: yl_61_powered
+theme: yl_61
+region: navigation
+weight: 0
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }
