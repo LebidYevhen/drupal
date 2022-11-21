@@ -1,0 +1,22 @@
+uuid: 24f3ba98-a0d7-4c37-9d77-b6a66c767e73
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - yl_61
+_core:
+  default_config_hash: erQSEZF2XUjNmgTl0uNRBzmg18ZGXwUcw2FhApoeuHk
+id: yl_61_content
+theme: yl_61
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

@@ -1,4 +1,4 @@
-uuid: 364f4716-6a41-4e85-bfd0-d4d61f249259
+uuid: 3e0f5cb7-3ce3-4529-be6f-8f475bffeeee
 langcode: en
 status: true
 dependencies:
@@ -10,7 +10,7 @@ id: node.book.field_book_genre
 field_name: field_book_genre
 entity_type: node
 bundle: book
-label: Genre
+label: 'Book genre'
 description: ''
 required: false
 translatable: false
