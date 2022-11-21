@@ -1,14 +1,13 @@
-uuid: b1601d37-e83b-46f1-acb1-080d26917e3c
+uuid: 04c776f8-0981-41aa-9386-9525a7e96425
 langcode: en
 status: true
 dependencies:
   config:
-    - system.menu.admin
     - taxonomy.vocabulary.book_genre
   module:
-    - node
     - taxonomy
     - user
+    - views_field_view
 id: book_genres
 label: 'Book genres'
 module: views
@@ -23,20 +22,19 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: 'Book genres'
       fields:
-        name:
-          id: name
+        tid:
+          id: tid
           table: taxonomy_term_field_data
-          field: name
+          field: tid
           relationship: none
           group_type: group
           admin_label: ''
           entity_type: taxonomy_term
-          entity_field: name
-          plugin_id: term_name
-          label: 'Book genre'
-          exclude: false
+          entity_field: tid
+          plugin_id: field
+          label: ''
+          exclude: true
           alter:
             alter_text: false
             text: ''
@@ -55,14 +53,62 @@ display:
             target: ''
             nl2br: false
             max_length: 0
-            word_boundary: false
-            ellipsis: false
+            word_boundary: true
+            ellipsis: true
             more_link: false
             more_link_text: ''
             more_link_path: ''
             strip_tags: false
             trim: false
             preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: number_integer
+          settings:
+            thousand_separator: ''
+            prefix_suffix: true
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        name:
+          id: name
+          table: taxonomy_term_field_data
+          field: name
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: taxonomy_term
+          entity_field: name
+          plugin_id: term_name
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            make_link: false
+            absolute: false
+            word_boundary: false
+            ellipsis: false
+            strip_tags: false
+            trim: false
             html: false
           element_type: ''
           element_class: ''
@@ -91,17 +137,15 @@ display:
           separator: ', '
           field_api_classes: false
           convert_spaces: false
-        nid:
-          id: nid
-          table: node_field_data
-          field: nid
-          relationship: reverse__node__field_book_genre
-          group_type: count
+        view:
+          id: view
+          table: views
+          field: view
+          relationship: none
+          group_type: group
           admin_label: ''
-          entity_type: node
-          entity_field: nid
-          plugin_id: field
-          label: Count
+          plugin_id: view
+          label: ''
           exclude: false
           alter:
             alter_text: false
@@ -134,7 +178,7 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: true
+          element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -142,30 +186,27 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          click_sort_column: value
-          type: number_integer
-          settings: {  }
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ','
-          field_api_classes: false
-          set_precision: false
-          precision: 0
-          decimal: .
-          format_plural: 0
-          format_plural_string: !!binary MQNAY291bnQ=
-          prefix: ''
-          suffix: ''
+          view: books
+          display: default
+          arguments: '{{ fields.tid }}'
       pager:
-        type: none
+        type: mini
         options:
           offset: 0
+          items_per_page: 10
+          total_pages: null
+          id: 0
+          tags:
+            next: ››
+            previous: ‹‹
+          expose:
+            items_per_page: false
+            items_per_page_label: 'Items per page'
+            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_options_all: false
+            items_per_page_options_all_label: '- All -'
+            offset: false
+            offset_label: Offset
       exposed_form:
         type: basic
         options:
@@ -213,24 +254,19 @@ display:
             operator_limit_selection: false
             operator_list: {  }
       style:
-        type: table
+        type: default
         options:
           grouping: {  }
           row_class: ''
           default_row_class: true
           uses_fields: false
-          columns: {  }
-          default: ''
-          info: {  }
-          override: true
-          sticky: false
-          summary: ''
-          order: asc
-          empty_table: false
-          caption: ''
-          description: ''
       row:
-        type: 'entity:taxonomy_term'
+        type: fields
+        options:
+          default_field_elements: true
+          inline: {  }
+          separator: ''
+          hide_empty: false
       query:
         type: views_query
         options:
@@ -239,18 +275,7 @@ display:
           distinct: false
           replica: false
           query_tags: {  }
-      relationships:
-        reverse__node__field_book_genre:
-          id: reverse__node__field_book_genre
-          table: taxonomy_term_field_data
-          field: reverse__node__field_book_genre
-          relationship: none
-          group_type: group
-          admin_label: field_book_genre
-          entity_type: taxonomy_term
-          plugin_id: entity_reverse
-          required: true
-      group_by: true
+      relationships: {  }
       header: {  }
       footer: {  }
       display_extenders: {  }
@@ -259,25 +284,6 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
-        - user.permissions
-      tags: {  }
-  page_1:
-    id: page_1
-    display_title: Page
-    display_plugin: page
-    position: 1
-    display_options:
-      display_extenders: {  }
-      path: book-genres
-      menu:
-        type: normal
-        title: 'Book genres'
-        menu_name: admin
-        parent: ''
-    cache_metadata:
-      max-age: -1
-      contexts:
-        - 'languages:language_content'
-        - 'languages:language_interface'
+        - url.query_args
         - user.permissions
       tags: {  }

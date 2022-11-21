@@ -1,14 +1,14 @@
 _core:
   default_config_hash: VDJxTZtQR21qB4lvOq8zszJZLvLKrSPQpdn2E3T71Ww
 langcode: en
-uuid: 499841a4-f00f-484c-a134-9bd03c249bc4
-name: test.loc
+uuid: c12ffdaf-e005-487d-8eb5-d40a93544dd0
+name: Drupal
 mail: iamj1eba@gmail.com
 slogan: ''
 page:
   403: ''
   404: ''
-  front: /node
+  front: /node/2
 admin_compact_mode: false
 weight_select_max: 100
 default_langcode: en

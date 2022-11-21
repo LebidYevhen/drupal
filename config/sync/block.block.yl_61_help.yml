@@ -1,0 +1,22 @@
+uuid: 5e7b5168-35da-41e4-ba67-3fdebd343016
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - yl_61
+_core:
+  default_config_hash: VfPFqqxfkomud5CO8DUijw85QIl9GIxh_nIxLOYESxg
+id: yl_61_help
+theme: yl_61
+region: header
+weight: 0
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }

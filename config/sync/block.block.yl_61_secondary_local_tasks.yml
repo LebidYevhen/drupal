@@ -1,0 +1,22 @@
+uuid: e8a5f0d0-d1db-4edc-98e1-c5f54286db00
+langcode: en
+status: true
+dependencies:
+  theme:
+    - yl_61
+_core:
+  default_config_hash: ydSxdq7R66I8UMC460rOzlfzvlUL4VRbdwc6z9DWaUI
+id: yl_61_secondary_local_tasks
+theme: yl_61
+region: highlighted
+weight: -2
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Secondary tabs'
+  label_display: '0'
+  provider: core
+  primary: false
+  secondary: true
+visibility: {  }

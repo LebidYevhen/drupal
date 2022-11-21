@@ -1,4 +1,4 @@
-uuid: e2f43d0a-5e0f-43af-b1f3-4618f46ce12d
+uuid: 305d97bd-4bfb-4773-b8b0-2e45b1a8d9c2
 langcode: en
 status: true
 dependencies:
@@ -14,7 +14,6 @@ dependencies:
     - path
     - system
     - taxonomy
-    - toolbar
     - tour
 _core:
   default_config_hash: Wur9kcEOwY1Jal81NssKnz3RhVJxAvBwyWQBGcA_1Go
@@ -27,7 +26,6 @@ permissions:
   - 'access content overview'
   - 'access contextual links'
   - 'access files overview'
-  - 'access toolbar'
   - 'access tour'
   - 'administer url aliases'
   - 'create article content'

@@ -1,50 +1,25 @@
-uuid: d17960b2-1b5e-441f-ace1-8cb485f72327
+uuid: b3aaf73e-415d-4f9c-99ee-1a9e877aad9e
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.book.field_book_circulation
-    - field.field.node.book.field_book_cover_image
-    - field.field.node.book.field_book_date_of_signing
+    - field.field.node.book.body
     - field.field.node.book.field_book_genre
-    - field.field.node.book.field_book_isbn
-    - field.field.node.book.field_book_publication_date
     - node.type.book
   module:
-    - datetime
-    - image
+    - text
     - user
 id: node.book.default
 targetEntityType: node
 bundle: book
 mode: default
 content:
-  field_book_circulation:
-    type: number_integer
-    label: above
-    settings:
-      thousand_separator: ''
-      prefix_suffix: true
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
     third_party_settings: {  }
-    weight: 1
-    region: content
-  field_book_cover_image:
-    type: image
-    label: above
-    settings:
-      image_link: ''
-      image_style: ''
-    third_party_settings: {  }
-    weight: 5
-    region: content
-  field_book_date_of_signing:
-    type: datetime_custom
-    label: above
-    settings:
-      timezone_override: ''
-      date_format: 'F d, Y'
-    third_party_settings: {  }
-    weight: 2
+    weight: 101
     region: content
   field_book_genre:
     type: entity_reference_label
@@ -52,28 +27,11 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 10
-    region: content
-  field_book_isbn:
-    type: string
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    weight: 7
-    region: content
-  field_book_publication_date:
-    type: datetime_custom
-    label: above
-    settings:
-      timezone_override: ''
-      date_format: 'F d, Y'
-    third_party_settings: {  }
-    weight: 3
+    weight: 102
     region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 0
+    weight: 100
     region: content
 hidden: {  }
