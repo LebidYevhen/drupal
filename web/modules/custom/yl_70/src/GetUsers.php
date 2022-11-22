@@ -22,7 +22,7 @@ class GetUsers {
   /**
    * GetUsers constructor.
    */
-  public function __construct(Connection $connection) {
+  public function __construct() {
     $this->connection = Database::getConnection();
   }
 
