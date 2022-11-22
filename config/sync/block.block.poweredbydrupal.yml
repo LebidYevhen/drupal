@@ -1,0 +1,20 @@
+uuid: ec0ae254-bb74-4b0b-806f-a13f678fedb4
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - yl_61
+id: poweredbydrupal
+theme: yl_61
+region: barsik_region
+weight: 0
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  label_display: visible
+  provider: system
+visibility: {  }
