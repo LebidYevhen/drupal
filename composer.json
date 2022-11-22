@@ -29,9 +29,11 @@
     "drupal/ctools": "^3.11",
     "drupal/devel": "4.1",
     "drupal/features": "3.12",
+    "drupal/maillog": "1.0",
     "drupal/module_filter": "^3.2",
     "drupal/page_manager": "dev-4.x",
     "drupal/panels": "4.6",
+    "drupal/ultimate_cron": "2.x-dev",
     "drupal/views_conditional": "1.4",
     "drupal/views_field_view": "dev-1.x",
     "drush/drush": "^10.0"

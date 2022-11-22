@@ -1,0 +1,4 @@
+services:
+  yl_70.custom_services:
+    class: Drupal\yl_70\GetUsers
+    arguments: ['@database']

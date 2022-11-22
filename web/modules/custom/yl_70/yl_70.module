@@ -1,0 +1,63 @@
+<?php
+
+use Drupal\Component\Utility\Html;
+
+/**
+ * @file
+ * Contains yl_70.module.
+ */
+
+/**
+ * Implements hook_mail().
+ */
+function yl_70_mail($key, &$message, $params) {
+$options = array(
+  'langcode' => $message['langcode'],
+);
+  switch ($key) {
+    case 'yl_70_cron':
+      $message['from'] = \Drupal::config('system.site')->get('mail');
+      $message['subject'] = t('Subject: @title', array('@title' => $params['title']), $options);
+      $message['body'][] = Html::escape($params['message']);
+      break;
+  }
+}
+
+/**
+ * Implements hook_cron().
+ */
+function yl_70_cron() {
+
+  $users = \Drupal::service('yl_70.custom_services')->getUsers();
+  foreach ($users as $user) {
+    $userBirthdate = $user->field_user_birthdate_value;
+    $time = strtotime($userBirthdate);
+
+    if (date('m-d') == date('m-d', $time)) {
+
+      $mailManager = \Drupal::service('plugin.manager.mail');
+      $module = 'yl_70';
+      $key = 'yl_70_cron';
+      $to = $user->mail;
+      $langcode = $user->langcode;
+      $params['message'] = sprintf('Happy Birthday, %s!', $user->name);
+      $params['title'] = 'Happy Birthday';
+      $reply = \Drupal::config('system.site')->get('mail');
+      $send = TRUE;
+
+      $result = $mailManager->mail($module, $key, $to, $langcode, $params, $reply, $send);
+      if ($result['result'] != TRUE) {
+        $message = t('There was a problem sending your email notification to @email.', ['@email' => $to]);
+        \Drupal::messenger()->addStatus($message, 'error');
+        \Drupal::logger('mail-log')->error($message);
+        return;
+      }
+
+      $message = t('An email notification has been sent to @email ', ['@email' => $to]);
+      \Drupal::messenger()->addStatus($message);
+      \Drupal::logger('mail-log')->notice($message);
+
+    }
+  }
+
+}
