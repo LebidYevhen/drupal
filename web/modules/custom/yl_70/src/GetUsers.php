@@ -34,6 +34,7 @@ class GetUsers {
     $query->innerJoin('user__field_user_birthdate', 'u', 'n.uid = u.entity_id');
     $query->fields('n', ['uid', 'mail', 'name', 'langcode']);
     $query->fields('u', ['field_user_birthdate_value']);
+    $query->where('MONTH(u.field_user_birthdate_value) = MONTH(SYSDATE()) AND DAY(u.field_user_birthdate_value) = DAY(SYSDATE())');
 
     return $query->execute()->fetchAll();
   }
