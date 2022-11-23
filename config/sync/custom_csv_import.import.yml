@@ -1,0 +1,5 @@
+fid: '8'
+creation: 1669214305
+skip_first_line: 1
+delimiter: ;
+enclosure: ','
