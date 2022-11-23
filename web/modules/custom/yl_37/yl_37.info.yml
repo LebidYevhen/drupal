@@ -1,0 +1,6 @@
+name: YL 37
+description: Task 37
+package: Custom
+type: module
+core_version_requirement: ^9
+version: 1.x
