@@ -1,0 +1,37 @@
+<?php
+
+/**
+ * @file
+ * Contains yl_39.module.
+ */
+
+use Drupal\taxonomy\Entity\Term;
+
+/**
+ * Implements hook_update_N().
+ *
+ * Don't forget to change N the next time you use this hook.
+ *
+ * To make this hook work visit site_domain/update.php
+ */
+function yl_39_update_9404() {
+
+  $countries = \Drupal\Core\Locale\CountryManager::getStandardList();
+
+  foreach ($countries as $key => $value) {
+    $countryName = (string) $value;
+
+    manage_term($countryName, 'country');
+  }
+
+}
+
+function manage_term($term_name, $vid) {
+  $term = \Drupal::entityTypeManager()
+    ->getStorage('taxonomy_term')
+    ->loadByProperties(['name' => $term_name, 'vid' => $vid]);
+  $term = reset($term);
+  if (!$term) {
+    $term = Term::create(['name' => $term_name, 'vid' => $vid,])->save();
+  }
+}

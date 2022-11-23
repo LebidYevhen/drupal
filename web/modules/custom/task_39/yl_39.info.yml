@@ -1,0 +1,5 @@
+name: YL 39
+description: Task 39
+package: Custom
+type: module
+core_version_requirement: ^9
