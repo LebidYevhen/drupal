@@ -23,9 +23,6 @@ function yl_70_mail($key, &$message, $params) {
   }
 }
 
-$users = \Drupal::service('yl_70.custom_services')->getUsers();
-//dump($users);
-
 /**
  * Implements hook_cron().
  */
