@@ -1,0 +1,33 @@
+id: yl_9_term_city
+label: 'Term City'
+migration_group: yl_9
+source:
+  plugin: csv
+  path: modules/custom/yl_9/assets/term_city.csv
+  delimiter: ';'
+  enclosure: '"'
+  header_row_count: 1
+  fields:
+    0:
+      name: id
+      label: 'id'
+    1:
+      name: city
+      label: 'city'
+    2:
+      name: country_id
+      label: 'country_id'
+  ids:
+    - id
+process:
+  name: city
+  field_country:
+    plugin: migration_lookup
+    migration: yl_9_term_country
+    source: country_id
+destination:
+  plugin: entity:taxonomy_term
+  default_bundle: city
+migration_dependencies:
+  required:
+    - yl_9_term_country

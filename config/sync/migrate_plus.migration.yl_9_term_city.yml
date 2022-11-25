@@ -1,0 +1,43 @@
+uuid: 649132e7-3ffa-48dc-8029-3f4294d09e6a
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: oY2WL48UoxeTBld9zBez4WZUK9NB8G6akE_oT9fa91U
+id: yl_9_term_city
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags: null
+migration_group: yl_9
+label: 'Term City'
+source:
+  plugin: csv
+  path: modules/custom/yl_9/assets/term_city.csv
+  delimiter: ;
+  enclosure: '"'
+  header_row_count: 1
+  fields:
+    -
+      name: id
+      label: id
+    -
+      name: city
+      label: city
+    -
+      name: country_id
+      label: country_id
+  ids:
+    - id
+process:
+  name: city
+  field_country:
+    plugin: migration_lookup
+    migration: yl_9_term_country
+    source: country_id
+destination:
+  plugin: 'entity:taxonomy_term'
+  default_bundle: city
+migration_dependencies:
+  required:
+    - yl_9_term_country

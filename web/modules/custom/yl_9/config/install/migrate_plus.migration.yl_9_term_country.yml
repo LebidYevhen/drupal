@@ -1,0 +1,23 @@
+id: yl_9_term_country
+label: 'Term Country'
+migration_group: yl_9
+source:
+  plugin: csv
+  path: modules/custom/yl_9/assets/term_country.csv
+  delimiter: ';'
+  enclosure: '"'
+  header_row_count: 1
+  fields:
+    0:
+      name: id
+      label: 'id'
+    1:
+      name: country
+      label: 'country'
+  ids:
+    - id
+process:
+  name: country
+destination:
+  plugin: entity:taxonomy_term
+  default_bundle: country

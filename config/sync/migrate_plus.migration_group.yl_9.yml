@@ -1,0 +1,15 @@
+uuid: 66132dcd-68ba-4356-adb2-164ee2884254
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - yl_9
+_core:
+  default_config_hash: dl9hUto30C1StdhaEuMbrcKKMtpwkCx9gOFM16cnjyo
+id: yl_9
+label: 'Countries and Cities'
+description: 'Migration Countries and cities associated with countries.'
+source_type: CSV
+module: null
+shared_configuration: null
