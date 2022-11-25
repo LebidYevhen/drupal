@@ -1,0 +1,8 @@
+id: yl_9
+label: Countries and Cities
+description: Migration Countries and cities associated with countries.
+source_type: CSV
+dependencies:
+  enforced:
+    module:
+      - yl_9

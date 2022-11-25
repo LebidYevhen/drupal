@@ -1,0 +1,34 @@
+uuid: 7297cb0c-f28a-43a9-b915-4fb3e4d48da1
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 57h1I86nkaYeff56ulBujXZwRtq9RSHghoZeMtgqp8o
+id: yl_9_term_country
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags: null
+migration_group: yl_9
+label: 'Term Country'
+source:
+  plugin: csv
+  path: modules/custom/yl_9/assets/term_country.csv
+  delimiter: ;
+  enclosure: '"'
+  header_row_count: 1
+  fields:
+    -
+      name: id
+      label: id
+    -
+      name: country
+      label: country
+  ids:
+    - id
+process:
+  name: country
+destination:
+  plugin: 'entity:taxonomy_term'
+  default_bundle: country
+migration_dependencies: null
