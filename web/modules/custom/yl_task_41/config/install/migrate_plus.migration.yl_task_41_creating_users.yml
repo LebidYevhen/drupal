@@ -1,0 +1,42 @@
+id: yl_task_41_creating_users
+label: 'Creating Users'
+migration_group: yl_task_41
+migration_tags:
+  - user
+source:
+  plugin: csv
+  path: modules/custom/yl_task_41/assets/users.csv
+  delimiter: ','
+  enclosure: '"'
+  header_row_count: 1
+  fields:
+    0:
+      name: uid
+      label: 'id'
+    1:
+      name: name
+      label: 'name'
+    2:
+      name: email
+      label: 'email'
+  ids:
+    - uid
+  constants:
+    status: 1
+    roles:
+      - authenticated
+      - administrator
+process:
+  mail: email
+  init: email
+  status: 'constants/status'
+  roles: 'constants/roles'
+  name: name
+destination:
+  plugin: entity:user
+migration_dependencies: {}
+dependencies:
+  enforced:
+    module:
+      - yl_task_41
+      - migrate_source_csv
